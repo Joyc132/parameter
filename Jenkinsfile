@@ -9,7 +9,7 @@ pipeline {
         stage('Trigger') {
             steps {
                 script {
-                    println("triggering the pipeline from a rest call..")
+                    println("triggering the pipeline from a rest call....")
                 }
             }
         }
