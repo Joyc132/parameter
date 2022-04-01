@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('docker login') {
+        stage('dockers login') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker_hub-joy', passwordVariable: 'pass', usernameVariable: 'uname')]) {
                     sh '''
