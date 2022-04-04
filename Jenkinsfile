@@ -6,7 +6,7 @@ pipeline {
 
         steps {
 
-          git credentialsId: '17371c59-6b11-42c7-bb25-a37a9febb4db', url: 'https://github.com/PrashantBhatasana/terraform-jenkins-ec2'
+          git credentialsId: 'github-joy', url: 'https://github.com/Joyc132/parameter.git'
 
         }
 
