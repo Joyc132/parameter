@@ -1,29 +1,62 @@
 pipeline {
     agent any
     stages {
-        stage('git clone') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/Joyc132/parameter.git']]]) {
-                 stash 'source'
-                }
-            }
+
+      stage('fetch_latest_code') {
+
+        steps {
+
+          git credentialsId: '17371c59-6b11-42c7-bb25-a37a9febb4db', url: 'https://github.com/PrashantBhatasana/terraform-jenkins-ec2'
+
         }
-    
-        stage('TF INIT AND PLAN ') {
-            steps {
-                
-                    sh '''
-                    terraform init
-                    terraform plan
-                    '''
-            }
+
+      }
+
+
+
+
+      stage('TF Init&Plan') {
+
+        steps {
+
+          sh 'terraform init'
+
+          sh 'terraform plan'
+
+        }      
+
+      }
+
+
+
+
+      stage('Approval') {
+
+        steps {
+
+          script {
+
+            def userInput = input(id: 'confirm', message: 'Apply Terraform?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply terraform', name: 'confirm'] ])
+
+          }
+
         }
-        stage('TF APPLY') {
-            steps {
-                sh '''
-                terraform apply -input=false
-                '''
-            }
+
+      }
+
+
+
+
+      stage('TF Apply') {
+
+        steps {
+
+          sh 'terraform apply -input=false'
+
         }
-    }
-}
+
+      }
+
+    } 
+
+  }
