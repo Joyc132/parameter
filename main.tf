@@ -11,7 +11,7 @@ resource "google_compute_instance" "vm_instance" {
 
   boot_disk {
     initialize_params {
-      image = "Ubuntu 20.04 LTS"
+      image = "ubuntu-2004-focal-v20220331"
     }
   }
 
