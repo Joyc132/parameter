@@ -1,5 +1,5 @@
 provider "google" {
-  project = "{{satya-project-344408}}"
+  project = "satya-project-344408"
   region  = "us-central1"
   credentials = "satya.json"
   zone    = "us-central1-a"
