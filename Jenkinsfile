@@ -6,7 +6,7 @@ pipeline{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'joy-git', url: 'https://github.com/Joyc132/parameter.git']]])
             }
         }
-        stage('Init'){
+        stage('Inite'){
             steps{
                 sh 'terraform init'
             }
