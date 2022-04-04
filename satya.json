@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "satya-project-344408",
+  "private_key_id": "1186ed156c73f7c631ca06c762e2ebf2fc3fd193",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7y70L8UYFaWq7\n0TRFpoaUjw8YqOmnlaNfRPK8qkrqaLXN//ZCl57omed4Musvm6TzONyyeqobMXkR\nza6XwN+Nv6ZInwvP2GpTsKXQNgatLktJLI3uN8DwzyacE6vk+MGf6JCxUsbStnN2\ndxyRv301K5PBv2u9eKkAoPup5Pw09PW6KSkRTh7nYa/2owcOIr6tk/y3mOlBEbeC\nyTFaqWiI6ViDwboFX8wVXVCu2VNWm5utY5vggAiuCYz5MLWRkloZDfHYLSp4w45s\ntiBkjhePabHc8p30MtcRUv/F4TtFJy9f4YAtRKs2wvUn0ZblTDUmONu46YPIv3oC\neqprNFVfAgMBAAECggEAUpbZfyUO3FZuIEdzK6Z+zVrVEs1GZPNENCPIdPyXkduX\nCQ+mp8ayli0JRS1vjTJwKp85QCz+HpN1YUUJoaerKVW9tXZs5W2R5Vhss9LuwL75\nUScNDFTsv3r6ye1EzaAw1ziaWcHDuuuOf+0GXXrPf9C4XJ7orR0hhitGQoN3/3lw\neUSXPtksLxdeYX4paINRfSoRJCK+CcQoRHi0AGnxZTJmbkZPZdf4bWzgd9hY5FIz\nw0lFv6ODNhi09hNvInfaLZbuDILpVbxnHHBeq6AW1USs5PE6Ml68UBuFsgd/opx/\ngeQu3DuHB29gJ3qV635aBLjfAsjC1LKaxMA0fY/HoQKBgQD/PsuxbOSVwl0VjOSJ\nOT1aMwo2dLdZrkPxR6X7VunrrdDz6MvxmU/1Dhdq8/K732ot+fM1mNmyYjIDJsaQ\n3z6UssGx6pOeJ2payaaYqlDNR1sCyp5xkz6s/aJUei7WVtSDbrNcQb8W2cR4d9e3\n0nAnSqcfm9kJAx4QvyV4wrNq6QKBgQC8WeNMX6SubeiTcRyG+WUiiJyDUuxXmAri\nBsKRytmIIEDPU6FVsxIuszybjt+xTnxNzQu9A7DB05Q4a1xmntTE3yNOcko262Jc\nSrA3IZ7PxHbnsISbMge8BSkToP1u6dhdMJ506811yFJkHKaiNnlzCHgjk0mGHED5\nWq8fheWBBwKBgQD9GW2uYAZColrfNbiggcvel2H3IcF2AiGJLbzfAA4xD0h1tFAX\nIClzHCgIfCIkPaPyNzn92bV0934UNe0MVvKdTKxZGfyLBRanM/IozCoXhDwxBm4a\nvSGXNGI1Vnr/O1a7hZgBUYiExifWNTAJLXjc3V/fLhEGqLq1bHVhy99RkQKBgQCb\nAGoy1t7igSaN997fIOxewAf1ds9ywnfqTF/gtQvRn6FWPV+e9C/5aJ1u8uQZuRpI\nuH55fUkAKYtn5spy1TEKFwuqKhnzGkCm7PwZUrysBOVJhBWM1l5RF/oW4jzOAvmA\nr1sno0pBLKrJIl7rTWMjDIw50qMGD8hUrJFDouAdDwKBgFRLRvAyPLvHBMyJRYmi\nWW70vx7JMNLHBrKNooNFMRgMu00QDEpF9Eax/lpsi380H39neMWo1fLBkeMFMTty\nAC0crwsuJbvOXegWS2UmsiOX88M516qLXp6BPDSRqa4fY/JlESfGixh1+g+W2ylC\nIyRR0kNMUgzm7eHOKlXo50ed\n-----END PRIVATE KEY-----\n",
+  "client_email": "satya-project-344408@appspot.gserviceaccount.com",
+  "client_id": "102552246671699500703",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/satya-project-344408%40appspot.gserviceaccount.com"
+}
