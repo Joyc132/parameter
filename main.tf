@@ -1,46 +1,24 @@
-terraform {
-  required_providers {
-    google = {
-      source = "hashicorp/google"
-    }
-  }
-}
-
 provider "google" {
-  version = "3.5.0"
-
-  credentials = file(var.credentials_file)
-
-  project = var.project
-  region  = var.region
-  zone    = var.zone
+  project = "{{satya-project-344408}}"
+  region  = "us-central1"
+  credentials = file("./satya.json")
+  zone    = "us-central1-c"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = var.instance_name
-  machine_type = var.machine_type
-  tags         = var.network_tags
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
 
   boot_disk {
     initialize_params {
-      image = var.machine_image
-      type  = var.disk_type
-      size  = var.disk_size
+      image = "Ubuntu 20.04 LTS"
     }
   }
 
-  scheduling {
-    preemptible       = true
-    automatic_restart = false
-  }
-
-  metadata_startup_script = file(var.startup_script)
-
-
   network_interface {
+    # A default network is created for all GCP projects
     network = "default"
     access_config {
     }
   }
 }
-
