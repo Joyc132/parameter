@@ -1,0 +1,8 @@
+region          = "europe-west2"
+gcp_project     = "satya-project-344408"
+credentials     = "satya.json"
+name            = "dev"
+subnet_cidr     = "10.10.0.0/24"
+instance_name   = "joy"
+machine_type    = "f1-micro"
+image           = "ubuntu-2004-focal-v20220331"
