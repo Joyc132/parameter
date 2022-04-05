@@ -57,6 +57,7 @@ resource "google_compute_instance" "vm-instance2" {
   metadata = {
     foo = "bar"
   }
+  metadata_startup_script = "${file("./setup.sh")}"
 
  
 }
