@@ -13,13 +13,13 @@ pipeline{
         }
         stage('Plan'){
             steps{
-                sh 'terraform plan'
+                sh 'terraform plan -var-file=terraform.tfvars'
             }
         }
         stage('Apply'){
             steps{
-                sh 'terraform apply -auto-approve'
-                sh 'terraform destroy -auto-approve'
+                sh 'terraform apply -var-file=terraform.tfvars -auto-approve'
+                //sh 'terraform destroy -auto-approve'
             }
         }
         
