@@ -1,17 +1,46 @@
+// Configure the Google Cloud provider
 provider "google" {
-  project = "satya-project-344408"
-  region  = "us-central1"
-  credentials = "satya.json"
-  zone    = "us-central1-a"
+ credentials = "${file("${var.credentials}")}"
+ project     = "${var.gcp_project}"
+ region      = "${var.region}"
+}
+// Create VPC
+resource "google_compute_network" "vpc" {
+ name                    = "${var.name}-vpc"
+ auto_create_subnetworks = "false"
 }
 
+// Create Subnet
+resource "google_compute_subnetwork" "subnet" {
+ name          = "${var.name}-subnet"
+ ip_cidr_range = "${var.subnet_cidr}"
+ network       = "${var.name}-vpc"
+ depends_on    = ["google_compute_network.vpc"]
+ region      = "${var.region}"
+}
+// VPC firewall configuration
+resource "google_compute_firewall" "firewall" {
+  name    = "${var.name}-firewall"
+  network = "${google_compute_network.vpc.name}"
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+}
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance1"
-  machine_type = "f1-micro"
+  name         = "${var.instance}-instance"
+  machine_type = "${var.machine_type}"
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-2004-focal-v20220331"
+      image = "${var.image}"
     }
   }
 
