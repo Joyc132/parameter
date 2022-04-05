@@ -3,6 +3,7 @@ provider "google" {
  credentials = "${file("${var.credentials}")}"
  project     = "${var.gcp_project}"
  region      = "${var.region}"
+ zone    = "${var.zone}"
 }
 // Create VPC
 resource "google_compute_network" "vpc" {
@@ -15,7 +16,6 @@ resource "google_compute_subnetwork" "subnet" {
  name          = "${var.name}-subnet"
  ip_cidr_range = "${var.subnet_cidr}"
  network       = "${var.name}-vpc"
- depends_on    = ["google_compute_network.vpc"]
  region      = "${var.region}"
 }
 // VPC firewall configuration
