@@ -32,7 +32,7 @@ resource "google_compute_firewall" "demo-firewall" {
   source_ranges = ["0.0.0.0/0"]
 }
 
-resource "google_compute_instance" "vm-instance2" {
+resource "google_compute_instance" "vm-instance" {
   name         = "${var.instance_name}"
   machine_type = "${var.machine_type}"
   zone         = "${var.zone}"
