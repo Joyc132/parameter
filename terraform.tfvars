@@ -1,11 +1,22 @@
 region          = "us-central1"
 gcp_project     = "satya-project-344408"
 credentials     = "satya.json"
+<<<<<<< HEAD
 vpc-name        = "dev"
 subnet-name     = "dev-sub"
 firewall-name   = "dev-fw"
 subnet_cidr     = "10.10.0.0/24"
 instance_name   = "satya"
 machine_type    = "f1-micro"
+=======
+vpc-name        = "suprobhat"
+subnet-name     = "suprbhat-sub"
+range_name      = "joy"
+ip_cidr_range   = "10.3.0.0/16"
+zone            = "us-central1-a"
+machine_type    = "e2-medium"
+instance_name   = "new-2"
+>>>>>>> 1fcf904d3600f9b38f04b7eb823bbda79542c77b
 image           = "ubuntu-2004-focal-v20220331"
-zone            = "us-central1-c"
+network         = "suprobhat"
+firewall-name   = "suprobhat-fw"
