@@ -8,6 +8,5 @@ variable "ip_cidr_range" {}
 variable "zone" {}
 variable "machine_type" {}
 variable "image" {}
-variable "network" {}
 variable "instance_name" {}
 variable "firewall-name" {}

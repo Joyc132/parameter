@@ -47,7 +47,7 @@ resource "google_compute_instance" "vm-instance" {
 
 
   network_interface {
-    network = "${var.network}"
+    network = "${google_compute_network.vpc_network.name}"
 
     access_config {
       // Ephemeral public IP
