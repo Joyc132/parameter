@@ -1,11 +1,11 @@
 pipeline{
     agent any
     stages{
-        stage('Git checkout'){
-            steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'joy-git', url: 'https://github.com/Joyc132/parameter.git']]])
-            }
-        }
+        // stage('Git checkout'){
+        //     steps{
+        //         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'joy-git', url: 'https://github.com/Joyc132/parameter.git']]])
+        //     }
+        // }
         // stage('Inite'){
         //     steps{
         //         sh 'terraform init'
